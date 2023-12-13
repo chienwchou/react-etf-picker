@@ -1,11 +1,16 @@
-import logo from './logo.svg';
+import Header from './components/header';
+import TakeQuiz from './components/takeQuiz';
+import Footer from './components/footer';
 import './App.css';
 
 function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <>
+      <Header />
+      {/* <Homepage /> */}
+      <TakeQuiz />
+      <Footer />
+    </>
   );
 }
 
