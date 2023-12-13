@@ -1,8 +1,11 @@
 import Disclaimer from "./layouts/disclaimer";
 import etfQuiz from '../assets/etf-quiz.jpg';
 import CustomModal from "./layouts/customModal";
+import { useRef } from "react";
 
 export default function TakeQuiz() {
+    const dialog = useRef()
+
     return (
         <>
             <section className="flex flex-row">
@@ -15,7 +18,7 @@ export default function TakeQuiz() {
                     <img className="object-cover" src={etfQuiz.src}></img>
                 </div>
             </section>
-            <CustomModal />
+            <CustomModal ref={dialog} />
             <Disclaimer>
                 The Investor Questionnaire suggests an asset allocation based on information you enter about your investment objectives and experience, time horizon, risk tolerance, and financial situation. Your asset allocation is how your portfolio is divided among stocks, bonds, and short-term reserves. As your financial circumstances or goals change, it may be helpful to complete the questionnaire again and reallocate the investments in your portfolio.
                 Before you begin, please review the questionnaire's assumptions and limitations and accept our terms and conditions by choosing Start the quiz.
