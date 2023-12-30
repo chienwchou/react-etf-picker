@@ -12,14 +12,15 @@ export default function Questionnaire() {
     });
 
     function answerSelected(event) {
-        const [currentQuestion, selectedAnswer] = event.target.value.split('-');
+        const [selectedQuestion, selectedAnswer] = event.target.value.split('-');
 
         setSelectedAnswer({
-            'question': currentQuestion,
+            'question': selectedQuestion,
             'answer': selectedAnswer
         });
     }
 
+    // retain selected answer
     function moveToNextQuestion() {
         setAnswers((prevAnswers => {
             const newAnswers = prevAnswers.map((answer, question) => {
@@ -28,6 +29,7 @@ export default function Questionnaire() {
                 }
                 return answer;
             });
+            newAnswers.push(selectedAnswer['answer']);
 
             return newAnswers;
         }));
@@ -35,6 +37,7 @@ export default function Questionnaire() {
         setCurrentQuestion((oldQuestion) => {
             return oldQuestion + 1;
         });
+
 
         setSelectedAnswer({
             'question': null,
@@ -46,7 +49,14 @@ export default function Questionnaire() {
         setCurrentQuestion((oldQuestion) => {
             return oldQuestion - 1;
         });
+
+        setSelectedAnswer({
+            'question': currentQuestion - 1,
+            'answer': answers[currentQuestion - 1]
+        });
     }
+
+    const selectedId = selectedAnswer['question'] !== null ? `${selectedAnswer['question']}-${selectedAnswer['answer']}` : null;
 
     return (
         <section>
@@ -63,6 +73,7 @@ export default function Questionnaire() {
                             question={question}
                             questionIndex={questionIndex}
                             currentQuestionIndex={currentQuestion}
+                            selectedId={selectedId}
                             onChange={answerSelected}
                         />
                     )

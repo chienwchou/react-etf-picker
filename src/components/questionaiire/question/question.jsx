@@ -1,4 +1,4 @@
-export default function Question({ question, questionIndex, currentQuestionIndex, onChange, ...props }) {
+export default function Question({ question, questionIndex, currentQuestionIndex, selectedId, onChange, ...props }) {
     if (questionIndex !== currentQuestionIndex) {
         return null;
     }
@@ -11,9 +11,12 @@ export default function Question({ question, questionIndex, currentQuestionIndex
                     <div className="basis-3/5">
                         <ul className="questionaiire-answers">
                             {question.selections.map((selection, selectionIndex) => {
-                                return (<li key={`select-${questionIndex}-${selectionIndex}`} className="m-4 mr-20 p-5 border-solid border border-black border-opacity-50 flex items-center">
-                                    <input id={`select-${questionIndex}-${selectionIndex}-input`} type="radio" name={`input-${questionIndex}`} value={`${questionIndex}-${selectionIndex}`} className="mr-3" onChange={onChange}></input>
-                                    <label htmlFor={`select-${questionIndex}-${selectionIndex}-input`} className="font-bold text-2xl">{selection}</label>
+                                const selectId = `${questionIndex}-${selectionIndex}`;
+                                console.log(selectId, selectedId);
+                                console.log(selectId === selectedId);
+                                return (<li key={`select-${selectId}`} className="m-4 mr-20 p-5 border-solid border border-black border-opacity-50 flex items-center">
+                                    <input id={`select-${selectId}-input`} type="radio" name={`input-${questionIndex}`} value={`${selectId}`} className="mr-3" onChange={onChange} checked={selectId === selectedId}></input>
+                                    <label htmlFor={`select-${selectId}-input`} className="font-bold text-2xl">{selection}</label>
                                 </li>)
                             })}
                         </ul>
