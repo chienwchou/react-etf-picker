@@ -72,7 +72,7 @@ export default function Homepage() {
       <section>
         <div className="flex p-8">
           <div className="flex flex-1 justify-around py-12 shadow-2xl">
-            <img src={calculator.src}></img>
+            <img src={calculator.src} alt="calculator.jpg"></img>
           </div>
           <div className="flex flex-1 flex-col text-center justify-center">
             <h1 className="font-bold text-4xl py-4">ETF Calculator!</h1>

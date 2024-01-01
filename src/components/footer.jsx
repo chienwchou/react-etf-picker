@@ -55,7 +55,7 @@ export default function Footer() {
           <li className="py-1">Community</li>
           <li className="py-1">eBooks</li>
           <li className="py-1">Status</li>
-          <li className="py-1">What's New</li>
+          <li className="py-1">What&apos;s New</li>
           <li className="py-1">Webcam Mic Test</li>
           <li className="py-1">Webcam Recorder</li>
         </ul>

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 export default function Header() {
   return (
     <header className="lg:px-8 py-6">

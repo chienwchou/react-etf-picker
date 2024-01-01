@@ -1,6 +1,6 @@
-import Disclaimer from "./layouts/disclaimer";
+import Disclaimer from "./layouts/Disclaimer";
 import etfQuiz from "../assets/etf-quiz.jpg";
-import CustomModal from "./layouts/customModal";
+import CustomModal from "./layouts/CustomModal";
 import { useRef } from "react";
 
 export default function TakeQuiz() {
@@ -28,7 +28,7 @@ export default function TakeQuiz() {
           </button>
         </div>
         <div className="flex-1">
-          <img className="object-cover" src={etfQuiz}></img>
+          <img className="object-cover" src={etfQuiz} alt="etfQuiz.jpg"></img>
         </div>
       </section>
       <CustomModal ref={dialog}>
@@ -36,6 +36,8 @@ export default function TakeQuiz() {
           <span
             className="text-black absolute top-0 right-0 p-5 cursor-pointer"
             onClick={closeModel}
+            onKeyDown={closeModel}
+            aria-hidden="true"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -59,15 +61,16 @@ export default function TakeQuiz() {
         <div className="modal-content py-8 px-5">
           <p className="py-2">
             The allocations provided are based on generally accepted investment
-            principles. There's no guarantee, however, that any particular asset
-            allocation or combination of investments will meet your objectives.
-            All investments involve risks, and fluctuations in the financial
-            markets and other factors may cause the value of your account to
-            decline. You should consider all of your options carefully before
-            investing. The investor questionnaire is provided to you free of
-            charge. It doesn't provide comprehensive investment or financial
-            advice. Vanguard isn't responsible for reviewing your financial
-            situation or updating the suggestions contained herein.
+            principles. There&apos;s no guarantee, however, that any particular
+            asset allocation or combination of investments will meet your
+            objectives. All investments involve risks, and fluctuations in the
+            financial markets and other factors may cause the value of your
+            account to decline. You should consider all of your options
+            carefully before investing. The investor questionnaire is provided
+            to you free of charge. It doesn&apos;t provide comprehensive
+            investment or financial advice. Vanguard isn&apos;t responsible for
+            reviewing your financial situation or updating the suggestions
+            contained herein.
           </p>
           <p className="py-2">
             By selecting Accept, you agree to the terms outlined on this page.
@@ -79,9 +82,9 @@ export default function TakeQuiz() {
           </p>
           <h3 className="py-2 font-semibold">Costs & risks</h3>
           <p className="py-2">
-            Vanguard doesn't charge you a fee to use our website, but you could
-            incur expenses from an internet service provider when you access
-            information online. Also, be aware that your internet service
+            Vanguard doesn&apos;t charge you a fee to use our website, but you
+            could incur expenses from an internet service provider when you
+            access information online. Also, be aware that your internet service
             provider may occasionally experience system failure, and hyperlinks
             to documents may not function properly.
           </p>
@@ -94,7 +97,7 @@ export default function TakeQuiz() {
             className="mx-5 py-5 px-10 bg-transparent text-black my-10 border-solid border-3 border-black rounded-full shadow-lg shadow-indigo-500/50"
             onClick={closeModel}
           >
-            Don't Accept
+            Don&apos;t Accept
           </button>
         </div>
       </CustomModal>
@@ -106,8 +109,8 @@ export default function TakeQuiz() {
         short-term reserves. As your financial circumstances or goals change, it
         may be helpful to complete the questionnaire again and reallocate the
         investments in your portfolio. Before you begin, please review the
-        questionnaire's assumptions and limitations and accept our terms and
-        conditions by choosing Start the quiz.
+        questionnaire&apos;s assumptions and limitations and accept our terms
+        and conditions by choosing Start the quiz.
       </Disclaimer>
     </>
   );

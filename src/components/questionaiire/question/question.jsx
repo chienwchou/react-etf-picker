@@ -4,7 +4,6 @@ export default function Question({
   currentQuestionIndex,
   selectedId,
   onChange,
-  ...props
 }) {
   if (questionIndex !== currentQuestionIndex) {
     return null;
@@ -52,13 +51,13 @@ export default function Question({
                 Why am I being asked this question?
               </h3>
               <p>
-                Once you start withdrawing and spending your money, you'll want
-                to be sure it will last as long as you need it to. Depending on
-                your goal, that could be a short or long period of time. It
-                might be a onetime expense, such as buying a house, several
-                years of paying college tuition, or even decades of enjoying a
-                long retirement. These future plans are important to consider
-                when mapping out an investment strategy.
+                Once you start withdrawing and spending your money, you&apos;ll
+                want to be sure it will last as long as you need it to.
+                Depending on your goal, that could be a short or long period of
+                time. It might be a onetime expense, such as buying a house,
+                several years of paying college tuition, or even decades of
+                enjoying a long retirement. These future plans are important to
+                consider when mapping out an investment strategy.
               </p>
             </div>
           </div>
