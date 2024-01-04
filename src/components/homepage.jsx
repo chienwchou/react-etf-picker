@@ -20,7 +20,7 @@ export default function Homepage() {
           <div className="">
             <img
               className="max-w-xs p-5 bg-purple-400 rounded-xl"
-              src={example1.src}
+              src={example1}
               alt="example1.png"
             ></img>
             <p className="text-center py-3">Conservative portfolio</p>
@@ -28,7 +28,7 @@ export default function Homepage() {
           <div>
             <img
               className="max-w-xs p-5 bg-purple-400 rounded-xl"
-              src={example2.src}
+              src={example2}
               alt="example2.png"
             ></img>
             <p className="text-center py-3">Progressive portfolio</p>
@@ -36,7 +36,7 @@ export default function Homepage() {
           <div>
             <img
               className="max-w-xs p-5 bg-purple-400 rounded-xl"
-              src={example3.src}
+              src={example3}
               alt="example3.png"
             ></img>
             <p className="text-center py-3">Risk-Tolerant portfolio</p>
@@ -46,7 +46,7 @@ export default function Homepage() {
           <div className="">
             <img
               className="max-w-xs p-5 bg-purple-400 rounded-xl"
-              src={example1.src}
+              src={example1}
               alt="example1.png"
             ></img>
             <p className="text-center py-3">Conservative portfolio</p>
@@ -54,7 +54,7 @@ export default function Homepage() {
           <div>
             <img
               className="max-w-xs p-5 bg-purple-400 rounded-xl"
-              src={example2.src}
+              src={example2}
               alt="example2.png"
             ></img>
             <p className="text-center py-3">Progressive portfolio</p>
@@ -62,7 +62,7 @@ export default function Homepage() {
           <div>
             <img
               className="max-w-xs p-5 bg-purple-400 rounded-xl"
-              src={example3.src}
+              src={example3}
               alt="example3.png"
             ></img>
             <p className="text-center py-3">Risk-Tolerant portfolio</p>
@@ -72,7 +72,7 @@ export default function Homepage() {
       <section>
         <div className="flex p-8">
           <div className="flex flex-1 justify-around py-12 shadow-2xl">
-            <img src={calculator.src} alt="calculator.jpg"></img>
+            <img src={calculator} alt="calculator.jpg"></img>
           </div>
           <div className="flex flex-1 flex-col text-center justify-center">
             <h1 className="font-bold text-4xl py-4">ETF Calculator!</h1>
