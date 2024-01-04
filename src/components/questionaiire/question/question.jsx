@@ -1,16 +1,17 @@
 export default function Question({
   question,
   questionIndex,
-  currentQuestionIndex,
-  selectedId,
   onChange,
+  currentQuestionIndex,
 }) {
-  if (questionIndex !== currentQuestionIndex) {
-    return null;
-  }
+  if (currentQuestionIndex !== questionIndex) return null;
 
   return (
-    <>
+    <div
+      style={{
+        minHeight: "700px",
+      }}
+    >
       <h2 className="px-5 py-3 font-bold text-2xl">{question.header}</h2>
       <div className="py-5">
         <div className="flex flex-row">
@@ -18,8 +19,6 @@ export default function Question({
             <ul className="questionaiire-answers">
               {question.selections.map((selection, selectionIndex) => {
                 const selectId = `${questionIndex}-${selectionIndex}`;
-                console.log(selectId, selectedId);
-                console.log(selectId === selectedId);
                 return (
                   <li
                     key={`select-${selectId}`}
@@ -29,10 +28,9 @@ export default function Question({
                       id={`select-${selectId}-input`}
                       type="radio"
                       name={`input-${questionIndex}`}
-                      value={`${selectId}`}
+                      value={selectionIndex}
                       className="mr-3"
-                      onChange={onChange}
-                      checked={selectId === selectedId}
+                      onChange={(events) => onChange(events, questionIndex)}
                     ></input>
                     <label
                       htmlFor={`select-${selectId}-input`}
@@ -63,6 +61,6 @@ export default function Question({
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
