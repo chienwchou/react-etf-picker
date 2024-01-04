@@ -1,17 +1,19 @@
+import { Link } from "react-router-dom";
+
 /* eslint-disable jsx-a11y/anchor-is-valid */
 export default function Header() {
   return (
     <header className="lg:px-8 py-6">
       <nav className="flex items-center">
         <div className="flex lg:flex-1">
-          <a href="/home" className="-m-1.5 p-1.5">
+          <Link to="/home" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
             <img
               className="h-8 w-auto"
               src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
               alt=""
             ></img>
-          </a>
+          </Link>
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
           <a className="flex items-center gap-x-1 text-sm font-semibold">
