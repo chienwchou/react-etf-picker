@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import QUESTIONS from "../../assets/etf-questions";
 import Question from "./question/Question";
 const questions = QUESTIONS;
@@ -6,6 +7,7 @@ const questions = QUESTIONS;
 export default function Questionnaire() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState(Array(questions.length).fill(0));
+  const navigate = useNavigate();
 
   function handleAnswerChange(events, questionIndex) {
     const selectedAnswer = events.target.value;
@@ -24,7 +26,7 @@ export default function Questionnaire() {
   function moveNext(nextQuestion) {
     if (nextQuestion) {
       if (currentQuestionIndex === questions.length - 1) {
-        console.log("move to results page");
+        navigate("/questionnaire/result");
         return;
       }
       setCurrentQuestionIndex((prevQuestionIndex) => prevQuestionIndex + 1);
@@ -70,7 +72,6 @@ export default function Questionnaire() {
         </button>
         <button
           onClick={() => moveNext(true)}
-          disabled={currentQuestionIndex === questions.length - 1}
           className="mx-5 py-5 px-16 bg-black text-white border-solid border-3 border-black rounded-full shadow-lg shadow-indigo-500/50 font-bold"
         >
           Next

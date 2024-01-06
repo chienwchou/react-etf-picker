@@ -10,7 +10,7 @@ export default function Question({
   return (
     <div
       style={{
-        minHeight: "700px",
+        minHeight: "600px",
       }}
     >
       <h2 className="px-5 py-3 font-bold text-2xl">{question.header}</h2>
