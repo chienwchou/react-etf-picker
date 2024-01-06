@@ -23,7 +23,10 @@ export default function Questionnaire() {
 
   function moveNext(nextQuestion) {
     if (nextQuestion) {
-      if (currentQuestionIndex === questions.length) return;
+      if (currentQuestionIndex === questions.length - 1) {
+        console.log("move to results page");
+        return;
+      }
       setCurrentQuestionIndex((prevQuestionIndex) => prevQuestionIndex + 1);
     } else {
       if (currentQuestionIndex === 0) return;
