@@ -10,7 +10,8 @@
   "plugins": ["react", "import", "jsx-a11y"],
   "rules": {
     "react/prop-types": 0,
-    "react/react-in-jsx-scope": 0
+    "react/react-in-jsx-scope": 0,
+    "no-unused-vars": "warn"
   },
   "parserOptions": {
     "ecmaVersion": 2022,
