@@ -1,19 +1,25 @@
 import Disclaimer from "./layouts/Disclaimer";
 import etfQuiz from "../assets/etf-quiz.jpg";
 import CustomModal from "./layouts/CustomModal";
+import { useNavigate } from "react-router-dom";
 import { useRef } from "react";
 
 export default function TakeQuiz() {
   const dialog = useRef();
+  const navigate = useNavigate();
 
   function openModel() {
-    console.log(dialog);
     dialog.current.showModal();
   }
 
   function closeModel() {
     dialog.current.close();
   }
+
+  function goToQuiz() {
+    navigate("/questionnaire");
+  }
+
   return (
     <>
       <section className="flex flex-row">
@@ -90,7 +96,10 @@ export default function TakeQuiz() {
           </p>
         </div>
         <div className="modal-footer flex items-center justify-center">
-          <button className="mx-5 py-5 px-10 bg-red-700 text-white my-10 rounded-full shadow-lg shadow-indigo-500/50">
+          <button
+            className="mx-5 py-5 px-10 bg-red-700 text-white my-10 rounded-full shadow-lg shadow-indigo-500/50"
+            onClick={goToQuiz}
+          >
             Accept
           </button>
           <button

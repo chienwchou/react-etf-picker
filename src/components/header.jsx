@@ -37,9 +37,9 @@ export default function Header() {
           <a href="#" className="text-sm font-semibold">
             Advanced Features
           </a>
-          <a href="#" className="text-sm font-semibold">
+          <Link to="/take-a-quiz" className="text-sm font-semibold">
             Take a quiz
-          </a>
+          </Link>
           <a href="#" className="text-sm font-semibold">
             How ETF works
           </a>

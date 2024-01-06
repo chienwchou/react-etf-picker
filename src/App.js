@@ -8,15 +8,17 @@ import TakeQuiz from "./components/TakeQuiz";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/home" element={<Homepage />}></Route>
-        <Route path="/take-a-quiz" element={<TakeQuiz />}></Route>
-      </Routes>
-      <Header />
-      <Questionnaire />
-      <Footer />
-    </BrowserRouter>
+    <>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/home" element={<Homepage />}></Route>
+          <Route path="/take-a-quiz" element={<TakeQuiz />}></Route>
+          <Route path="/questionnaire" element={<Questionnaire />}></Route>
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </>
   );
 }
 
