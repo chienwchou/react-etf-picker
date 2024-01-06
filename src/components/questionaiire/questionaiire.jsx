@@ -63,12 +63,14 @@ export default function Questionnaire() {
       <div className="flex pb-4">
         <button
           onClick={() => moveNext(false)}
+          disabled={currentQuestionIndex === 0}
           className="mx-5 py-5 px-16 bg-white text-black rounded-full shadow-lg shadow-indigo-500/50 font-bold"
         >
           Back
         </button>
         <button
           onClick={() => moveNext(true)}
+          disabled={currentQuestionIndex === questions.length - 1}
           className="mx-5 py-5 px-16 bg-black text-white border-solid border-3 border-black rounded-full shadow-lg shadow-indigo-500/50 font-bold"
         >
           Next
