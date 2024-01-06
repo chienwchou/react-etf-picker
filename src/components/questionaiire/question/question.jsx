@@ -1,4 +1,5 @@
 export default function Question({
+  answer,
   question,
   questionIndex,
   onChange,
@@ -19,6 +20,7 @@ export default function Question({
             <ul className="questionaiire-answers">
               {question.selections.map((selection, selectionIndex) => {
                 const selectId = `${questionIndex}-${selectionIndex}`;
+                console.log(answer, selectionIndex);
                 return (
                   <li
                     key={`select-${selectId}`}
@@ -31,6 +33,7 @@ export default function Question({
                       value={selectionIndex}
                       className="mr-3"
                       onChange={(events) => onChange(events, questionIndex)}
+                      checked={answer == selectionIndex}
                     ></input>
                     <label
                       htmlFor={`select-${selectId}-input`}

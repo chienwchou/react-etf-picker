@@ -45,10 +45,11 @@ export default function Questionnaire() {
           ></div>
         </div>
       </div>
-      {answers.map((answser, answerIndex) => {
+      {answers.map((answer, answerIndex) => {
         return (
           <Question
             key={`question-${answerIndex}`}
+            answer={answer}
             question={questions[answerIndex]}
             questionIndex={answerIndex}
             onChange={handleAnswerChange}
