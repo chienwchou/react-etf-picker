@@ -1,6 +1,6 @@
 import { useState } from "react";
 import QUESTIONS from "../../assets/etf-questions";
-import Question from "./question/question";
+import Question from "./question/Question";
 const questions = QUESTIONS;
 
 export default function Questionnaire() {
