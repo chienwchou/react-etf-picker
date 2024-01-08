@@ -140,9 +140,8 @@ export default function SimpleCalculator() {
                 className="border-2 border-gray-400 rounded-lg p-2"
               ></input>
               <input
-                id="default-range"
+                id="years-t-grow-range"
                 type="range"
-                value="50"
                 className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
               ></input>
             </div>
