@@ -49,7 +49,7 @@ export default function Homepage() {
               src={example1}
               alt="example1.png"
             ></img>
-            <p className="text-center py-3">Conservative portfolio</p>
+            <p className="text-center py-3">balanced portfolio</p>
           </div>
           <div>
             <img
@@ -57,7 +57,7 @@ export default function Homepage() {
               src={example2}
               alt="example2.png"
             ></img>
-            <p className="text-center py-3">Progressive portfolio</p>
+            <p className="text-center py-3">Defensive portfolio</p>
           </div>
           <div>
             <img
@@ -65,7 +65,7 @@ export default function Homepage() {
               src={example3}
               alt="example3.png"
             ></img>
-            <p className="text-center py-3">Risk-Tolerant portfolio</p>
+            <p className="text-center py-3">Income portfolio</p>
           </div>
         </div>
       </section>
